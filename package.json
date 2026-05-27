@@ -1,0 +1,24 @@
+{
+  "name": "react-native-web-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "web:dev": "bun --filter web dev",
+    "mobile:start": "bun --filter mobile start",
+    "mobile:android": "bun --filter mobile android",
+    "mobile:ios": "bun --filter mobile ios",
+    "build:web": "bun --filter web build",
+    "typecheck": "tsc --noEmit --project tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "expo": "~50.0.14",
+    "react-native": "0.73.6",
+    "typescript": "^5.3.3"
+  }
+}
